@@ -66,8 +66,28 @@
 
             <div class="w3-container">
                 <ol>
+                    <li>Use the command 'git status' to check what branch you are in and what files have been changed/added</li>
                     <li>Use the command 'git add -A' in order to add any new files to the repo</li>
+                    <li>Use the command 'git commit -m "{commit message detailing the changes made in this commit}"'</li>
+                    <li>Use the command 'git pull origin main' to make sure your files are up to date</li>
+                    <li>Use the command 'git push origin {branch}'</li>
                 </ol>
+            </div>
+        </div>
+    </div>
+
+    <div id="lookup3" class="w3-modal">
+        <div class="w3-modal-content">
+            <header class="w3-container w3-teal">
+                <span onclick="document.getElementById('lookup3').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <h2>Simple CLI Commands</h2>
+            </header>
+
+            <div class="w3-container">
+                <ul>
+                    <li>'cd {directory path}' - Changes your current working directory</li>
+                    <li>'ls -al' - Lists the files in your current directory including hidden files</li>
+                </ul>
             </div>
         </div>
     </div>
