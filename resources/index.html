@@ -5,35 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./static/style.css" rel="stylesheet">
-    <title>U of T Bootcamp</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Home</title>
 </head>
 <body>
-    <header>
-        <h1>U of T Study Cheatsheet</h1>
-        <nav>
-            <a class="no-deco" href="index.html">Home</a>
-            <a class="no-deco" href="solutions.html">Solutions</a>
-            <a class="no-deco" href="homework.html">Homework Examples</a>
+    <header class="header">
+        <h1 class="title">U of T Study Cheatsheet</h1>
+        <nav class="navbar">
+            <a class="no-deco navbar--item" href="index.html">Home</a>
+            <a class="no-deco navbar--item" href="solutions.html">Solutions</a>
+            <a class="no-deco navbar--item" href="homework.html">Homework Examples</a>
         </nav>
     </header>
-    <main>
-        <section>
-            <h2>Useful links</h2>
-            <ul>
-                <li><a class="no-deco" href="https://training.github.com/downloads/github-git-cheat-sheet.pdf">Git Cheatsheet</a></li>
-                <li><a class="no-deco" href="https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf">HTML Cheatsheet</a></li>
-                <li><a class="no-deco" href="https://discord.gg/kc2hUBJQ6A">Study Group Discord</a></li>
-                <li><a class="no-deco" href="https://developer.mozilla.org/en-US/docs/Learn/HTML">Mozilla Documentation</a></li>
+    <main class="main">
+        <section class="card">
+            <h2 class="card--header">Useful links</h2>
+            <ul class="card--list">
+                <li class="card--list-item"><a class="no-deco" target="_blank" href="https://training.github.com/downloads/github-git-cheat-sheet.pdf">Git Cheatsheet</a></li>
+                <li class="card--list-item"><a class="no-deco" target="_blank" href="https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf">HTML Cheatsheet</a></li>
+                <li class="card--list-item"><a class="no-deco" target="_blank" href="https://discord.gg/kc2hUBJQ6A">Study Group Discord</a></li>
+                <li class="card--list-item"><a class="no-deco" target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML">Mozilla Documentation</a></li>
             </ul>
         </section>
-        <section>
-            <h2>Quick Lookup</h2>
-            <ul>
-                <li>Clone a Git repo</li>
-                <li>Push to a Git repo</li>
-                <li>CLI simple commands</li>
+        <section class="card">
+            <h2 class="card--header">Quick Lookup</h2>
+            <ul class="card--list">
+                <li class="card--list-item"><a class="no-deco" href="#">Clone a Git repo</a></li>
+                <li class="card--list-item"><a class="no-deco" href="#">Push to a Git repo</a></li>
+                <li class="card--list-item"><a class="no-deco" href="#">CLI simple commands</a></li>
             </ul>
         </section>
     </main>
+
+    <button onclick="document.getElementById('lookup1').style.display='block'" class="w3-button w3-black">Open Modal</button>
+    <button onclick="document.getElementById('lookup2').style.display='block'" class="w3-button w3-black">Open Modal</button>
+
+    <div id="lookup1" class="w3-modal">
+        <div class="w3-modal-content">
+            <header class="w3-container w3-teal">
+                <span onclick="document.getElementById('lookup1').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <h2>Clone a Git repo</h2>
+            </header>
+
+            <div class="w3-container">
+                <ol>
+                    <li>Navigate to the directory you would like the repo to be created in using 'cd'</li>
+                    <li>Get the 'HTTPS' url for the repo from Github</li>
+                    <li>Use 'git clone {HTTPS URL}'</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div id="lookup2" class="w3-modal">
+        <div class="w3-modal-content">
+            <header class="w3-container w3-teal">
+                <span onclick="document.getElementById('lookup2').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <h2>Push to a Git repo</h2>
+            </header>
+
+            <div class="w3-container">
+                <ol>
+                    <li>Use the command 'git add -A' in order to add any new files to the repo</li>
+                </ol>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
