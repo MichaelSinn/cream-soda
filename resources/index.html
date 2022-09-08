@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./static/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Home</title>
 </head>
 <body>
@@ -30,41 +29,38 @@
         <section class="card">
             <h2 class="card--header">Quick Lookup</h2>
             <ul class="card--list">
-                <li class="card--list-item"><a class="no-deco" href="#">Clone a Git repo</a></li>
-                <li class="card--list-item"><a class="no-deco" href="#">Push to a Git repo</a></li>
-                <li class="card--list-item"><a class="no-deco" href="#">CLI simple commands</a></li>
+                <li class="card--list-item"><button onclick="document.getElementById('lookup1').style.display='block'" class="w3-button">Clone Git repo</button></li>
+                <li class="card--list-item"><button onclick="document.getElementById('lookup2').style.display='block'" class="w3-button">Push to a Git repo</button></li>
+                <li class="card--list-item"><button onclick="document.getElementById('lookup3').style.display='block'" class="w3-button">Simple CLI commands</button></li>
             </ul>
         </section>
     </main>
 
-    <button onclick="document.getElementById('lookup1').style.display='block'" class="w3-button w3-black">Open Modal</button>
-    <button onclick="document.getElementById('lookup2').style.display='block'" class="w3-button w3-black">Open Modal</button>
-
-    <div id="lookup1" class="w3-modal">
-        <div class="w3-modal-content">
+    <article id="lookup1" class="w3-modal">
+        <section class="w3-modal-content">
             <header class="w3-container w3-teal">
                 <span onclick="document.getElementById('lookup1').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                 <h2>Clone a Git repo</h2>
             </header>
 
-            <div class="w3-container">
+            <content class="w3-container">
                 <ol>
                     <li>Navigate to the directory you would like the repo to be created in using 'cd'</li>
                     <li>Get the 'HTTPS' url for the repo from Github</li>
                     <li>Use 'git clone {HTTPS URL}'</li>
                 </ol>
-            </div>
-        </div>
-    </div>
+            </content>
+        </section>
+    </article>
 
-    <div id="lookup2" class="w3-modal">
-        <div class="w3-modal-content">
+    <article id="lookup2" class="w3-modal">
+        <section class="w3-modal-content">
             <header class="w3-container w3-teal">
                 <span onclick="document.getElementById('lookup2').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                 <h2>Push to a Git repo</h2>
             </header>
 
-            <div class="w3-container">
+            <content class="w3-container">
                 <ol>
                     <li>Use the command 'git status' to check what branch you are in and what files have been changed/added</li>
                     <li>Use the command 'git add -A' in order to add any new files to the repo</li>
@@ -72,24 +68,24 @@
                     <li>Use the command 'git pull origin main' to make sure your files are up to date</li>
                     <li>Use the command 'git push origin {branch}'</li>
                 </ol>
-            </div>
-        </div>
-    </div>
+            </content>
+        </section>
+    </article>
 
-    <div id="lookup3" class="w3-modal">
-        <div class="w3-modal-content">
+    <article id="lookup3" class="w3-modal">
+        <section class="w3-modal-content">
             <header class="w3-container w3-teal">
                 <span onclick="document.getElementById('lookup3').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                <h2>Simple CLI Commands</h2>
+                <h2>Simple CLI commands</h2>
             </header>
 
-            <div class="w3-container">
+            <content class="w3-container">
                 <ul>
-                    <li>'cd {directory path}' - Changes your current working directory</li>
-                    <li>'ls -al' - Lists the files in your current directory including hidden files</li>
+                    <li><strong>'cd {directory path}'</strong> - Changes your current working directory</li>
+                    <li><strong>'ls -al'</strong> - Lists the files in your current directory including hidden files</li>
                 </ul>
-            </div>
-        </div>
-    </div>
+            </content>
+        </section>
+    </article>
 </body>
 </html>
